@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Script/Itens/Box_Movable.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Itens/box_creation-1.png.png" type="Texture" id=2]
+
+[node name="Box" type="KinematicBody2D"]
+collision_layer = 4
+collision_mask = 5
+collision/safe_margin = 0.01
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 9.90953, -9.87826 ],
+"_edit_vertical_guides_": [ -10.1811, 10.3065 ]
+}
+
+[node name="Box_Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.75, 0.7 )
+texture = ExtResource( 2 )
+
+[node name="Box_RayCast_Top" type="RayCast2D" parent="."]
+scale = Vector2( 0.75, 0.7 )
+enabled = true
+cast_to = Vector2( 0, -16 )
+collide_with_areas = true
+
+[node name="Box_RayCast_Right" type="RayCast2D" parent="."]
+position = Vector2( 0, -6 )
+enabled = true
+cast_to = Vector2( 11, 0 )
+collide_with_areas = true
+
+[node name="Box_RayCast_Left" type="RayCast2D" parent="."]
+position = Vector2( 0, -6 )
+enabled = true
+cast_to = Vector2( -11, 0 )
+collide_with_areas = true
+
+[node name="Box_Collision" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -7, 9, 8, 9, 10, 7, 10, -7, 7, -10, -7, -10, -10, -7, -10, 7 )

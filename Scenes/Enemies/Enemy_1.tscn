@@ -1,0 +1,60 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Script/Enemies/Enemy_1.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Enemies/enemy_alien_1_right-1.png.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Enemies/enemy_alien_1_right-2.png.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Enemies/enemy_alien_1_left-1.png.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Enemies/enemy_alien_1_left-2.png.png" type="Texture" id=5]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "right",
+"speed": 2.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "left",
+"speed": 2.0
+} ]
+
+[node name="Enemy_1" type="KinematicBody2D"]
+collision_layer = 8
+collision_mask = 31
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 10.8375, 5.44766, -10.5964, -16.0489 ]
+}
+
+[node name="Enemy_1_AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "left"
+playing = true
+
+[node name="Enemy_1_Collision" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PoolVector2Array( -14.7631, 13.0798, 13.9763, 13.0798, 16.5575, 10.8426, 13.7287, 5.51033, 13.7287, -10.5964, 6.50883, -16.0586, -7.3292, -16.0489, -14.426, -10.5109, -14.426, 5.39957, -16.918, 10.7748 )
+
+[node name="Enemy_1_Raycast_Floor_Right" type="RayCast2D" parent="."]
+position = Vector2( 18, 0 )
+enabled = true
+cast_to = Vector2( 0, 15 )
+collision_mask = 2
+collide_with_areas = true
+
+[node name="Enemy_1_Raycast_Floor_Left" type="RayCast2D" parent="."]
+position = Vector2( -15, 0 )
+enabled = true
+cast_to = Vector2( 0, 15 )
+collision_mask = 2
+collide_with_areas = true
+
+[node name="Enemy_1_Area_Hit" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 31
+
+[node name="Enemy_1_Area_Hit_Collision" type="CollisionPolygon2D" parent="Enemy_1_Area_Hit"]
+modulate = Color( 0.00784314, 1, 0.768627, 1 )
+polygon = PoolVector2Array( -19.1336, 10.6393, -14.8365, 15.0466, 13.3704, 14.9364, 18.6592, 10.6393, 14.913, 4.57919, 14.9986, -12.3009, 7.98546, -17.2205, -8.23901, -17.2205, -15.7755, -11.6728, -15.7755, 5.28436 )
+[connection signal="area_entered" from="Enemy_1_Area_Hit" to="." method="_on_Enemy_1_Area_Hit_area_entered"]

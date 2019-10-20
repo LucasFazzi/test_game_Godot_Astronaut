@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Sprites/Background/background-last-layer.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/Background/background-2.png.png" type="Texture" id=2]
+
+[node name="Background_Parallax" type="ParallaxBackground"]
+scroll_base_scale = Vector2( 0.7, 1 )
+
+[node name="Parallax_Layer_1" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2( 2400, 0 )
+
+[node name="Parallax_Sprite_1" type="Sprite" parent="Parallax_Layer_1"]
+position = Vector2( 0, -938.85 )
+scale = Vector2( 0.8, 0.8259 )
+texture = ExtResource( 1 )
+
+[node name="Parallax_Layer_2" type="ParallaxLayer" parent="."]
+editor/display_folded = true
+motion_scale = Vector2( 0.9, 1 )
+motion_mirroring = Vector2( 2400, 0 )
+
+[node name="Parallax_Sprite_2" type="Sprite" parent="Parallax_Layer_2"]
+position = Vector2( -49.386, -900 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 2 )
