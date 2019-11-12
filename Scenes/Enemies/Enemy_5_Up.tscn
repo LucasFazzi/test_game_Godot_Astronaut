@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Script/Enemies/Enemy_5_Up.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Enemies/enemy_5-1.png.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Enemies/enemy_5-2.png.png" type="Texture" id=3]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "idle",
+"speed": 1.0
+} ]
+
+[node name="Enemy_5_1_Up" type="StaticBody2D"]
+collision_layer = 8
+script = ExtResource( 1 )
+
+[node name="Enemy_5_1_AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "idle"
+frame = 1
+
+[node name="Enemy_5_1_Collision" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -8.91927, -4.30458, -8.91927, -1.68843, -6.45701, 1.00466, -6.45701, 9.62256, -8.91927, 9.62256, -14.4593, 13.7007, -14.4593, 15.4704, 14.2413, 15.5474, 14.1644, 13.6237, 8.83767, 9.75567, 6.16205, 9.77645, 6.0851, 1.00466, 8.6243, -1.22676, 8.70125, -4.22763, 5.55208, -7.92137, -5.48575, -7.92137 )
+
+[node name="Enemy_5_1_Notifier" type="VisibilityNotifier2D" parent="."]
+
+[node name="Enemy_5_PositionShot" type="Position2D" parent="."]
+position = Vector2( 0, -22 )

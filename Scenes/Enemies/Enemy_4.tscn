@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Script/Enemies/Enemy_4.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Enemies/enemy_4-1.png.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Enemies/enemy_4-2.png.png" type="Texture" id=3]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "idle",
+"speed": 2.0
+} ]
+
+[node name="Enemy_4" type="KinematicBody2D"]
+collision_layer = 8
+collision_mask = 30
+collision/safe_margin = 0.01
+script = ExtResource( 1 )
+
+[node name="Enemy_4_AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "idle"
+
+[node name="Enemy_4_Collision" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -14.7787, -6.77875, -14.7787, 6.8696, -10.5338, 6.97707, -10.3726, 10.6847, 8.54167, 10.6847, 7.73566, 6.97707, 11.0134, 6.92334, 10.6373, 9.71749, 14.936, 9.82496, 14.5061, -9.78783, 11.0134, -9.78783, 11.1209, -7.10115, 8.9178, -7.04742, 8.70287, -10.8088, -11.1786, -10.755, -10.8025, -7.10115 )
+
+[node name="Enemy_4_Notifier" type="VisibilityNotifier2D" parent="."]

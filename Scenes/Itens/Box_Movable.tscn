@@ -17,12 +17,6 @@ __meta__ = {
 scale = Vector2( 0.75, 0.7 )
 texture = ExtResource( 2 )
 
-[node name="Box_RayCast_Top" type="RayCast2D" parent="."]
-scale = Vector2( 0.75, 0.7 )
-enabled = true
-cast_to = Vector2( 0, -16 )
-collide_with_areas = true
-
 [node name="Box_RayCast_Right" type="RayCast2D" parent="."]
 position = Vector2( 0, -6 )
 enabled = true

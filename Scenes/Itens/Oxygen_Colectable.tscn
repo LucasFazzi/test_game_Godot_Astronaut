@@ -23,8 +23,11 @@ script = ExtResource( 1 )
 [node name="Oxygen_Colectable_AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 animation = "idle"
-playing = true
 
 [node name="Oxygen_Colectable_Collision" type="CollisionShape2D" parent="."]
 shape = SubResource( 2 )
+
+[node name="Oxygen_Notifier" type="VisibilityNotifier2D" parent="."]
+position = Vector2( -0.183641, 0.459098 )
+scale = Vector2( 1.22037, 1.79883 )
 [connection signal="body_entered" from="." to="." method="_on_Oxygen_Colectable_body_entered"]

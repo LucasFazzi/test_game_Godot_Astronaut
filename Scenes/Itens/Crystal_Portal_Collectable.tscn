@@ -23,8 +23,11 @@ script = ExtResource( 1 )
 frames = SubResource( 1 )
 animation = "idle"
 frame = 1
-playing = true
 
 [node name="Crystal_Portal_Collectable_Collision" type="CollisionShape2D" parent="."]
 shape = SubResource( 2 )
+
+[node name="Crystal_Portal_Notifier" type="VisibilityNotifier2D" parent="."]
+position = Vector2( -0.18403, -0.276039 )
+scale = Vector2( 1.6993, 1.6901 )
 [connection signal="body_entered" from="." to="." method="_on_Crystal_Portal_Collectable_body_entered"]

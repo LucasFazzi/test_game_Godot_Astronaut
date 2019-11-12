@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Script/Enemies/Enemy_6.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Enemies/enemy_6-1.png.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Enemies/enemy_6-2.png.png" type="Texture" id=3]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "idle",
+"speed": 2.0
+} ]
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 14.7721
+
+[node name="Enemy_6" type="KinematicBody2D"]
+collision_layer = 8
+collision_mask = 2
+collision/safe_margin = 0.01
+script = ExtResource( 1 )
+
+[node name="Enemy_6_AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "idle"
+
+[node name="Enemy_6_Collision" type="CollisionShape2D" parent="."]
+shape = SubResource( 2 )
+
+[node name="Enemy_6_Notifier" type="VisibilityNotifier2D" parent="."]
+position = Vector2( -0.188868, -0.363215 )
+scale = Vector2( 1.66783, 1.64652 )

@@ -1,0 +1,57 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Script/Enemies/Enemy_1_1_Down.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Enemies/enemy_1_no_gravity-1.png.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Enemies/enemy_1_no_gravity-2.png.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Enemies/enemy_1_no_gravity-3.png.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Enemies/enemy_1_no_gravity-4.png.png" type="Texture" id=5]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "left",
+"speed": 2.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "right",
+"speed": 2.0
+} ]
+
+[node name="Enemy_1_1_Down" type="KinematicBody2D"]
+rotation = 3.14159
+collision_layer = 8
+collision_mask = 30
+collision/safe_margin = 0.01
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 10.8375, 5.44766, -10.5964, -16.0489 ]
+}
+
+[node name="Enemy_1_1_AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 0.0809937, 0.0809937 )
+frames = SubResource( 1 )
+animation = "left"
+frame = 1
+
+[node name="Enemy_1_1_Collision" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -14.7631, 13.0798, 13.9763, 13.0798, 14.2629, 10.8188, 13.3602, 9.77716, 13.0824, 5.88836, 13.0129, 3.73563, 13.0129, -5.91693, 11.138, -8.41688, 9.40192, -10.8474, 6.97142, -13.0001, 2.66596, -14.5973, -4.97276, -14.5973, -8.4449, -13.139, -11.8476, -10.0835, -12.542, -7.51412, -12.6115, 4.91615, -12.8198, 8.11053, -14.5559, 11.3743 )
+
+[node name="Enemy_1_1_Raycast_Floor_Left" type="RayCast2D" parent="."]
+position = Vector2( 18, 0 )
+enabled = true
+cast_to = Vector2( 0, 15 )
+collision_mask = 2
+collide_with_areas = true
+
+[node name="Enemy_1_1_Raycast_Floor_Right" type="RayCast2D" parent="."]
+position = Vector2( -15, 0 )
+enabled = true
+cast_to = Vector2( 0, 15 )
+collision_mask = 2
+collide_with_areas = true
+
+[node name="Enemy_1_1_Notifier" type="VisibilityNotifier2D" parent="."]
+position = Vector2( -0.405829, -0.338191 )
+scale = Vector2( 1.48699, 1.49376 )

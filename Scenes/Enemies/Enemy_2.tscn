@@ -14,22 +14,18 @@ animations = [ {
 
 [node name="Enemy_2" type="KinematicBody2D"]
 collision_layer = 8
-collision_mask = 31
+collision_mask = 30
+collision/safe_margin = 0.01
 script = ExtResource( 1 )
 
 [node name="Enemy_2_AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 animation = "idle"
 frame = 1
-playing = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PoolVector2Array( -14.6535, -14.1408, -14.6535, 11.8854, -11.5299, 15.8592, -6.5892, 16.0212, -2.89688, 13.3213, -2.89688, 7.84683, 2.84683, 7.84683, 2.93657, 12.8726, 6.07766, 15.9239, 11.7161, 15.9352, 14.2266, 12.9434, 14.3886, 5.16782, 14.5137, -15.5767, 6.52639, -15.5767, 5.26995, -6.96117, -5.23026, -7.05091, -6.57644, -16.0255, -14.3843, -16.0255 )
+polygon = PoolVector2Array( -13.8261, -12.1758, -13.4463, -3.78003, -12.6236, -1.39443, -12.5426, 6.86708, -13.6112, 12.2079, -11.5155, 15.8291, -6.41081, 15.8291, -4.5448, 14.4974, -4.31519, 12.2289, -3.99279, 7.28543, 3.63743, 7.2644, 4.28223, 10.2735, 4.3897, 14.2171, 6.64652, 15.6679, 11.2676, 15.7217, 13.6062, 12.905, 12.6469, 6.46211, 12.4849, -1.31344, 13.7523, -3.72154, 13.5737, -14.4981, 8.4999, -14.4387, 6.23744, -13.3669, 6.41606, -6.28172, 5.68832, -5.0323, -5.27939, -4.96963, -6.21947, -6.41109, -6.67948, -14.6476, -13.2888, -14.6476 )
 
-[node name="Enemy_2_Area_Hit" type="Area2D" parent="."]
-collision_layer = 8
-collision_mask = 31
-
-[node name="Enemy_2_Area_Collision" type="CollisionPolygon2D" parent="Enemy_2_Area_Hit"]
-polygon = PoolVector2Array( -5.24032, -11.414, -6.23198, -17.1436, -15.2671, -16.9232, -15.7078, 11.3941, -12.6226, 16.4625, -6.34216, 16.7931, -1.71444, 13.2672, -1.60426, 8.52927, 1.70126, 8.63946, 1.81144, 12.4959, 6.2188, 17.4542, 11.5076, 17.1236, 16.0252, 12.9366, 15.6946, -16.3723, 5.99843, -17.0334, 3.68457, -8.21867, -4.24867, -8.21867 )
-[connection signal="area_entered" from="Enemy_2_Area_Hit" to="." method="_on_Enemy_2_Area_Hit_area_entered"]
+[node name="Enemy_2_Notifier" type="VisibilityNotifier2D" parent="."]
+position = Vector2( -0.183131, 0.549393 )
+scale = Vector2( 1.44562, 1.56771 )
