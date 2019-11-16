@@ -1,21 +1,21 @@
 [gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Script/Enemies/Enemy_1_1_Down.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/Enemies/enemy_1_no_gravity-1.png.png" type="Texture" id=2]
-[ext_resource path="res://Sprites/Enemies/enemy_1_no_gravity-2.png.png" type="Texture" id=3]
-[ext_resource path="res://Sprites/Enemies/enemy_1_no_gravity-3.png.png" type="Texture" id=4]
-[ext_resource path="res://Sprites/Enemies/enemy_1_no_gravity-4.png.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Enemies/enemy_1_no_gravity-3.png.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Enemies/enemy_1_no_gravity-4.png.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Enemies/enemy_1_no_gravity-1.png.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Enemies/enemy_1_no_gravity-2.png.png" type="Texture" id=5]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
 "loop": true,
-"name": "left",
+"name": "right",
 "speed": 2.0
 }, {
 "frames": [ ExtResource( 4 ), ExtResource( 5 ) ],
 "loop": true,
-"name": "right",
+"name": "left",
 "speed": 2.0
 } ]
 
@@ -36,7 +36,7 @@ animation = "left"
 frame = 1
 
 [node name="Enemy_1_1_Collision" type="CollisionPolygon2D" parent="."]
-polygon = PoolVector2Array( -14.7631, 13.0798, 13.9763, 13.0798, 14.2629, 10.8188, 13.3602, 9.77716, 13.0824, 5.88836, 13.0129, 3.73563, 13.0129, -5.91693, 11.138, -8.41688, 9.40192, -10.8474, 6.97142, -13.0001, 2.66596, -14.5973, -4.97276, -14.5973, -8.4449, -13.139, -11.8476, -10.0835, -12.542, -7.51412, -12.6115, 4.91615, -12.8198, 8.11053, -14.5559, 11.3743 )
+polygon = PoolVector2Array( -13.0195, 13.0467, 12.4341, 13.0478, 12.6321, 11.0687, 12.5661, 9.94715, 11.9064, 6.51665, 11.8404, 3.8778, 12.2363, -5.82264, 10.1912, -8.06566, 8.40995, -10.4406, 5.90305, -12.3538, 3.13226, -13.8052, -5.04817, -13.9371, -8.08286, -12.9476, -11.1835, -8.92334, -12.371, -6.02061, -12.2391, 3.28399, -10.3259, 5.65896, -12.0412, 8.36378, -13.3606, 10.3429 )
 
 [node name="Enemy_1_1_Raycast_Floor_Left" type="RayCast2D" parent="."]
 position = Vector2( 18, 0 )

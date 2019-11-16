@@ -33,7 +33,7 @@ tracks/0/keys = {
 }
 
 [node name="Onion_Colletable" type="Area2D"]
-collision_layer = 2
+collision_layer = 256
 script = ExtResource( 1 )
 
 [node name="Onion_Colletable_AnimatedSprite" type="AnimatedSprite" parent="."]

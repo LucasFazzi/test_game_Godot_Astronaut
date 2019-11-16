@@ -1,10 +1,7 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Script/Enemies/Enemy_8_Up.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Enemies/enemy_8-1.png (4).png" type="Texture" id=2]
-
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 4.22056, 15.4102 )
 
 [node name="Enemy_8_Up" type="StaticBody2D"]
 position = Vector2( 0, -0.735107 )
@@ -15,5 +12,5 @@ script = ExtResource( 1 )
 [node name="Enemy_8_Up_Sprite" type="Sprite" parent="."]
 texture = ExtResource( 2 )
 
-[node name="Enemy_8_Up_Collision" type="CollisionShape2D" parent="."]
-shape = SubResource( 1 )
+[node name="Enemy_8_Up_Collision" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -4.43495, -10.5045, -4.43495, -8.49897, -3.18148, -7.24552, -3.11881, -6.55611, -2.61743, -6.18007, -2.55475, -3.17177, -3.3695, -2.98375, -3.43218, 0.901977, -2.55475, 1.46603, -2.6801, 3.34623, -3.49485, 3.84761, -3.6202, 6.29186, -4.68564, 6.79324, -4.62296, 9.92689, -3.55752, 10.679, -3.43218, 13.1859, -2.30406, 13.3739, -2.30406, 15.0034, 2.2084, 15.0661, 2.8978, 13.1232, 3.33651, 10.3656, 4.2766, 10.0522, 4.08858, 6.35453, 3.21116, 5.91582, 2.96047, 3.72226, 2.2084, 3.4089, 2.14572, 1.34069, 3.14849, 1.15267, 3.27384, -3.1091, 2.14572, -3.61048, 2.14572, -6.24275, 3.27384, -6.55611, 3.46185, -8.62432, 4.52729, -8.81234, 4.40195, -10.5672, 3.39918, -10.5878, 3.27384, -12.28, 2.2084, -12.7187, 2.33374, -15.4136, -2.05337, -15.2883, -2.30406, -12.2173, -3.3695, -12.0293, -3.55752, -10.5251 )

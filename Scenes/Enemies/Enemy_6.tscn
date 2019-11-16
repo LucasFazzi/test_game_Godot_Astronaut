@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Script/Enemies/Enemy_6.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Enemies/enemy_6-1.png.png" type="Texture" id=2]
@@ -12,9 +12,6 @@ animations = [ {
 "speed": 2.0
 } ]
 
-[sub_resource type="CircleShape2D" id=2]
-radius = 14.7721
-
 [node name="Enemy_6" type="KinematicBody2D"]
 collision_layer = 8
 collision_mask = 2
@@ -25,8 +22,8 @@ script = ExtResource( 1 )
 frames = SubResource( 1 )
 animation = "idle"
 
-[node name="Enemy_6_Collision" type="CollisionShape2D" parent="."]
-shape = SubResource( 2 )
+[node name="Enemy_6_Collision" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -12.8176, 8.68785, -10.9719, 5.23459, -12.1031, 1.00733, -13.6511, 0.471478, -12.2222, -0.659763, -12.5199, -5.89919, -14.1274, -8.22121, -11.3291, -6.97089, -8.64984, -9.59061, -10.0788, -13.2225, -8.05445, -12.0912, -4.06534, -12.2103, -0.909773, -15.485, 0.935934, -15.5445, 3.13888, -12.0317, 7.3066, -12.2699, 9.7477, -13.1629, 9.03323, -9.35245, 10.5812, -7.26859, 13.6773, -8.04259, 12.1888, -4.35118, 11.8316, -0.719301, 14.3917, -0.362068, 12.3079, 1.36456, 12.2483, 2.7935, 11.1171, 5.05598, 11.6529, 5.94906, 13.1414, 9.16417, 7.90199, 9.5214, 6.77075, 10.8313, 6.59214, 14.5822, 3.37703, 12.3793, -3.82718, 12.1411, -5.85151, 14.4036, -6.26828, 10.3549, -8.70938, 9.22371 )
 
 [node name="Enemy_6_Notifier" type="VisibilityNotifier2D" parent="."]
 position = Vector2( -0.188868, -0.363215 )

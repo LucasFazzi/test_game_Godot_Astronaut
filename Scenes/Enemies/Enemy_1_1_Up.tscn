@@ -1,21 +1,21 @@
 [gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Script/Enemies/Enemy_1_1_Up.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/Enemies/enemy_1-1.png.png" type="Texture" id=2]
-[ext_resource path="res://Sprites/Enemies/enemy_1-2.png.png" type="Texture" id=3]
-[ext_resource path="res://Sprites/Enemies/enemy_1-3.png.png" type="Texture" id=4]
-[ext_resource path="res://Sprites/Enemies/enemy_1-4.png.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Enemies/enemy_1-3.png.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Enemies/enemy_1-4.png.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Enemies/enemy_1-1.png.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Enemies/enemy_1-2.png.png" type="Texture" id=5]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
 "loop": true,
-"name": "left",
+"name": "right",
 "speed": 2.0
 }, {
 "frames": [ ExtResource( 4 ), ExtResource( 5 ) ],
 "loop": true,
-"name": "right",
+"name": "left",
 "speed": 2.0
 } ]
 
@@ -35,7 +35,7 @@ animation = "left"
 frame = 1
 
 [node name="Enemy_1_1_Collision" type="CollisionPolygon2D" parent="."]
-polygon = PoolVector2Array( -14.7631, 13.0798, 13.9763, 13.0798, 14.2629, 10.8188, 13.3602, 9.77716, 13.0824, 5.88836, 13.0129, 3.73563, 13.0129, -5.91693, 11.138, -8.41688, 9.40192, -10.8474, 6.97142, -13.0001, 2.66596, -14.5973, -4.97276, -14.5973, -8.4449, -13.139, -11.8476, -10.0835, -12.542, -7.51412, -12.6115, 4.91615, -12.8198, 8.11053, -14.5559, 11.3743 )
+polygon = PoolVector2Array( -12.5945, 13.2817, 12.8681, 13.3137, 11.975, 6.4667, 11.6178, 3.37068, 12.3322, 0.750958, 12.4513, -4.76122, 11.201, -7.38094, 9.35529, -9.64342, 6.73558, -11.7273, 2.92508, -14.1684, -5.29131, -14.2279, -8.26826, -12.5608, -10.8284, -9.94112, -11.9001, -7.20232, -12.0788, 2.91931, -10.2926, 5.12226, -11.6024, 7.95518, -13.3291, 9.32458 )
 
 [node name="Enemy_1_1_Raycast_Floor_Right" type="RayCast2D" parent="."]
 position = Vector2( 18, 0 )
@@ -45,7 +45,7 @@ collision_mask = 2
 collide_with_areas = true
 
 [node name="Enemy_1_1_Raycast_Floor_Left" type="RayCast2D" parent="."]
-position = Vector2( -15, 0 )
+position = Vector2( -19, 0 )
 enabled = true
 cast_to = Vector2( 0, 15 )
 collision_mask = 2

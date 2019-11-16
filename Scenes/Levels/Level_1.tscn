@@ -20,7 +20,7 @@ editor/display_folded = true
 position = Vector2( -451.973, -158.56 )
 
 [node name="Crystal_Portal_Collectable2" parent="Collectables_Crystal_Portal" instance=ExtResource( 2 )]
-position = Vector2( -430.876, -350.192 )
+position = Vector2( -429.444, -350.192 )
 
 [node name="Crystal_Portal_Collectable3" parent="Collectables_Crystal_Portal" instance=ExtResource( 2 )]
 position = Vector2( 649.304, -594.208 )
@@ -46,156 +46,155 @@ position = Vector2( -769.245, -486.841 )
 [node name="Crystal_Portal_Collectable10" parent="Collectables_Crystal_Portal" instance=ExtResource( 2 )]
 position = Vector2( 610.831, -34.6462 )
 
-[node name="Colectables_Oxygen" type="Node2D" parent="."]
+[node name="Collectables_Oxygen" type="Node2D" parent="."]
 editor/display_folded = true
 position = Vector2( 27.9615, 179.753 )
 
-[node name="Oxygen_Colectable" parent="Colectables_Oxygen" instance=ExtResource( 3 )]
+[node name="Oxygen_Colectable" parent="Collectables_Oxygen" instance=ExtResource( 3 )]
 position = Vector2( 139.032, -210.001 )
 
-[node name="Oxygen_Colectable6" parent="Colectables_Oxygen" instance=ExtResource( 3 )]
+[node name="Oxygen_Colectable6" parent="Collectables_Oxygen" instance=ExtResource( 3 )]
 position = Vector2( 390.719, -372.063 )
 
-[node name="Oxygen_Colectable9" parent="Colectables_Oxygen" instance=ExtResource( 3 )]
+[node name="Oxygen_Colectable9" parent="Collectables_Oxygen" instance=ExtResource( 3 )]
 position = Vector2( 212.321, -894.954 )
 
-[node name="Oxygen_Colectable12" parent="Colectables_Oxygen" instance=ExtResource( 3 )]
+[node name="Oxygen_Colectable12" parent="Collectables_Oxygen" instance=ExtResource( 3 )]
 position = Vector2( -208.039, -675.502 )
 
-[node name="Oxygen_Colectable15" parent="Colectables_Oxygen" instance=ExtResource( 3 )]
+[node name="Oxygen_Colectable15" parent="Collectables_Oxygen" instance=ExtResource( 3 )]
 position = Vector2( -903.488, -1015.5 )
 
-[node name="Oxygen_Colectable17" parent="Colectables_Oxygen" instance=ExtResource( 3 )]
+[node name="Oxygen_Colectable17" parent="Collectables_Oxygen" instance=ExtResource( 3 )]
 position = Vector2( -365.674, -1173.13 )
 
-[node name="Oxygen_Colectable36" parent="Colectables_Oxygen" instance=ExtResource( 3 )]
+[node name="Oxygen_Colectable36" parent="Collectables_Oxygen" instance=ExtResource( 3 )]
 position = Vector2( -434.209, 24.7159 )
 
-[node name="Oxygen_Colectable37" parent="Colectables_Oxygen" instance=ExtResource( 3 )]
+[node name="Oxygen_Colectable37" parent="Collectables_Oxygen" instance=ExtResource( 3 )]
 position = Vector2( 349.899, 14.9553 )
 
-[node name="Oxygen_Colectable42" parent="Colectables_Oxygen" instance=ExtResource( 3 )]
+[node name="Oxygen_Colectable42" parent="Collectables_Oxygen" instance=ExtResource( 3 )]
 position = Vector2( 1257.64, -294.133 )
 
-[node name="Oxygen_Colectable45" parent="Colectables_Oxygen" instance=ExtResource( 3 )]
+[node name="Oxygen_Colectable45" parent="Collectables_Oxygen" instance=ExtResource( 3 )]
 position = Vector2( 2454.95, 34.4767 )
 
-[node name="Oxygen_Colectable48" parent="Colectables_Oxygen" instance=ExtResource( 3 )]
+[node name="Oxygen_Colectable48" parent="Collectables_Oxygen" instance=ExtResource( 3 )]
 position = Vector2( 3160.97, 44.2375 )
 
-[node name="Oxygen_Colectable21" parent="Colectables_Oxygen" instance=ExtResource( 3 )]
+[node name="Oxygen_Colectable21" parent="Collectables_Oxygen" instance=ExtResource( 3 )]
 position = Vector2( 484.318, -1129.86 )
 
-[node name="Oxygen_Colectable24" parent="Colectables_Oxygen" instance=ExtResource( 3 )]
+[node name="Oxygen_Colectable24" parent="Collectables_Oxygen" instance=ExtResource( 3 )]
 position = Vector2( 2453.22, -462.842 )
 
-[node name="Oxygen_Colectable27" parent="Colectables_Oxygen" instance=ExtResource( 3 )]
+[node name="Oxygen_Colectable27" parent="Collectables_Oxygen" instance=ExtResource( 3 )]
 position = Vector2( 2586, -1082.49 )
 
-[node name="Oxygen_Colectable30" parent="Colectables_Oxygen" instance=ExtResource( 3 )]
+[node name="Oxygen_Colectable30" parent="Collectables_Oxygen" instance=ExtResource( 3 )]
 position = Vector2( 2926.8, -1286.09 )
 
-[node name="Oxygen_Colectable33" parent="Colectables_Oxygen" instance=ExtResource( 3 )]
+[node name="Oxygen_Colectable33" parent="Collectables_Oxygen" instance=ExtResource( 3 )]
 position = Vector2( 2709.93, -307.93 )
 
-[node name="Oxygen_Colectable2" parent="Colectables_Oxygen" instance=ExtResource( 3 )]
+[node name="Oxygen_Colectable2" parent="Collectables_Oxygen" instance=ExtResource( 3 )]
 position = Vector2( 167.27, -195.268 )
 
-[node name="Oxygen_Colectable4" parent="Colectables_Oxygen" instance=ExtResource( 3 )]
+[node name="Oxygen_Colectable4" parent="Collectables_Oxygen" instance=ExtResource( 3 )]
 position = Vector2( 418.957, -357.33 )
 
-[node name="Oxygen_Colectable7" parent="Colectables_Oxygen" instance=ExtResource( 3 )]
+[node name="Oxygen_Colectable7" parent="Collectables_Oxygen" instance=ExtResource( 3 )]
 position = Vector2( 240.559, -880.221 )
 
-[node name="Oxygen_Colectable10" parent="Colectables_Oxygen" instance=ExtResource( 3 )]
+[node name="Oxygen_Colectable10" parent="Collectables_Oxygen" instance=ExtResource( 3 )]
 position = Vector2( -179.801, -660.769 )
 
-[node name="Oxygen_Colectable14" parent="Colectables_Oxygen" instance=ExtResource( 3 )]
+[node name="Oxygen_Colectable14" parent="Collectables_Oxygen" instance=ExtResource( 3 )]
 position = Vector2( -875.25, -1000.77 )
 
-[node name="Oxygen_Colectable18" parent="Colectables_Oxygen" instance=ExtResource( 3 )]
+[node name="Oxygen_Colectable18" parent="Collectables_Oxygen" instance=ExtResource( 3 )]
 position = Vector2( -337.436, -1158.4 )
 
-[node name="Oxygen_Colectable34" parent="Colectables_Oxygen" instance=ExtResource( 3 )]
+[node name="Oxygen_Colectable34" parent="Collectables_Oxygen" instance=ExtResource( 3 )]
 position = Vector2( -405.971, 39.4489 )
 
-[node name="Oxygen_Colectable38" parent="Colectables_Oxygen" instance=ExtResource( 3 )]
+[node name="Oxygen_Colectable38" parent="Collectables_Oxygen" instance=ExtResource( 3 )]
 position = Vector2( 378.137, 29.6882 )
 
-[node name="Oxygen_Colectable41" parent="Colectables_Oxygen" instance=ExtResource( 3 )]
+[node name="Oxygen_Colectable41" parent="Collectables_Oxygen" instance=ExtResource( 3 )]
 position = Vector2( 1285.88, -279.4 )
 
-[node name="Oxygen_Colectable43" parent="Colectables_Oxygen" instance=ExtResource( 3 )]
+[node name="Oxygen_Colectable43" parent="Collectables_Oxygen" instance=ExtResource( 3 )]
 position = Vector2( 2483.19, 49.2097 )
 
-[node name="Oxygen_Colectable46" parent="Colectables_Oxygen" instance=ExtResource( 3 )]
+[node name="Oxygen_Colectable46" parent="Collectables_Oxygen" instance=ExtResource( 3 )]
 position = Vector2( 3189.21, 58.9704 )
 
-[node name="Oxygen_Colectable19" parent="Colectables_Oxygen" instance=ExtResource( 3 )]
+[node name="Oxygen_Colectable19" parent="Collectables_Oxygen" instance=ExtResource( 3 )]
 position = Vector2( 512.557, -1115.13 )
 
-[node name="Oxygen_Colectable23" parent="Colectables_Oxygen" instance=ExtResource( 3 )]
+[node name="Oxygen_Colectable23" parent="Collectables_Oxygen" instance=ExtResource( 3 )]
 position = Vector2( 2481.45, -448.109 )
 
-[node name="Oxygen_Colectable26" parent="Colectables_Oxygen" instance=ExtResource( 3 )]
+[node name="Oxygen_Colectable26" parent="Collectables_Oxygen" instance=ExtResource( 3 )]
 position = Vector2( 2614.24, -1067.76 )
 
-[node name="Oxygen_Colectable29" parent="Colectables_Oxygen" instance=ExtResource( 3 )]
+[node name="Oxygen_Colectable29" parent="Collectables_Oxygen" instance=ExtResource( 3 )]
 position = Vector2( 2955.04, -1271.36 )
 
-[node name="Oxygen_Colectable31" parent="Colectables_Oxygen" instance=ExtResource( 3 )]
+[node name="Oxygen_Colectable31" parent="Collectables_Oxygen" instance=ExtResource( 3 )]
 position = Vector2( 2738.17, -293.196 )
 
-[node name="Oxygen_Colectable3" parent="Colectables_Oxygen" instance=ExtResource( 3 )]
+[node name="Oxygen_Colectable3" parent="Collectables_Oxygen" instance=ExtResource( 3 )]
 position = Vector2( 194.28, -207.545 )
 
-[node name="Oxygen_Colectable5" parent="Colectables_Oxygen" instance=ExtResource( 3 )]
+[node name="Oxygen_Colectable5" parent="Collectables_Oxygen" instance=ExtResource( 3 )]
 position = Vector2( 445.967, -369.607 )
 
-[node name="Oxygen_Colectable8" parent="Colectables_Oxygen" instance=ExtResource( 3 )]
+[node name="Oxygen_Colectable8" parent="Collectables_Oxygen" instance=ExtResource( 3 )]
 position = Vector2( 267.569, -892.499 )
 
-[node name="Oxygen_Colectable11" parent="Colectables_Oxygen" instance=ExtResource( 3 )]
+[node name="Oxygen_Colectable11" parent="Collectables_Oxygen" instance=ExtResource( 3 )]
 position = Vector2( -152.791, -673.046 )
 
-[node name="Oxygen_Colectable13" parent="Colectables_Oxygen" instance=ExtResource( 3 )]
+[node name="Oxygen_Colectable13" parent="Collectables_Oxygen" instance=ExtResource( 3 )]
 position = Vector2( -848.239, -1013.04 )
 
-[node name="Oxygen_Colectable16" parent="Colectables_Oxygen" instance=ExtResource( 3 )]
+[node name="Oxygen_Colectable16" parent="Collectables_Oxygen" instance=ExtResource( 3 )]
 position = Vector2( -310.426, -1170.68 )
 
-[node name="Oxygen_Colectable35" parent="Colectables_Oxygen" instance=ExtResource( 3 )]
+[node name="Oxygen_Colectable35" parent="Collectables_Oxygen" instance=ExtResource( 3 )]
 position = Vector2( -378.961, 27.1715 )
 
-[node name="Oxygen_Colectable39" parent="Colectables_Oxygen" instance=ExtResource( 3 )]
+[node name="Oxygen_Colectable39" parent="Collectables_Oxygen" instance=ExtResource( 3 )]
 position = Vector2( 405.147, 17.4109 )
 
-[node name="Oxygen_Colectable40" parent="Colectables_Oxygen" instance=ExtResource( 3 )]
+[node name="Oxygen_Colectable40" parent="Collectables_Oxygen" instance=ExtResource( 3 )]
 position = Vector2( 1312.89, -291.677 )
 
-[node name="Oxygen_Colectable44" parent="Colectables_Oxygen" instance=ExtResource( 3 )]
+[node name="Oxygen_Colectable44" parent="Collectables_Oxygen" instance=ExtResource( 3 )]
 position = Vector2( 2510.2, 36.9323 )
 
-[node name="Oxygen_Colectable47" parent="Colectables_Oxygen" instance=ExtResource( 3 )]
+[node name="Oxygen_Colectable47" parent="Collectables_Oxygen" instance=ExtResource( 3 )]
 position = Vector2( 3216.22, 46.6931 )
 
-[node name="Oxygen_Colectable20" parent="Colectables_Oxygen" instance=ExtResource( 3 )]
+[node name="Oxygen_Colectable20" parent="Collectables_Oxygen" instance=ExtResource( 3 )]
 position = Vector2( 539.567, -1127.41 )
 
-[node name="Oxygen_Colectable22" parent="Colectables_Oxygen" instance=ExtResource( 3 )]
+[node name="Oxygen_Colectable22" parent="Collectables_Oxygen" instance=ExtResource( 3 )]
 position = Vector2( 2508.47, -460.386 )
 
-[node name="Oxygen_Colectable25" parent="Colectables_Oxygen" instance=ExtResource( 3 )]
+[node name="Oxygen_Colectable25" parent="Collectables_Oxygen" instance=ExtResource( 3 )]
 position = Vector2( 2641.25, -1080.03 )
 
-[node name="Oxygen_Colectable28" parent="Colectables_Oxygen" instance=ExtResource( 3 )]
+[node name="Oxygen_Colectable28" parent="Collectables_Oxygen" instance=ExtResource( 3 )]
 position = Vector2( 2982.05, -1283.63 )
 
-[node name="Oxygen_Colectable32" parent="Colectables_Oxygen" instance=ExtResource( 3 )]
+[node name="Oxygen_Colectable32" parent="Collectables_Oxygen" instance=ExtResource( 3 )]
 position = Vector2( 2765.18, -305.474 )
 
 [node name="Collectables_Onion" type="Node2D" parent="."]
-editor/display_folded = true
 position = Vector2( 29.7196, 179.753 )
 
 [node name="Onion_Colletable" parent="Collectables_Onion" instance=ExtResource( 4 )]
@@ -203,6 +202,30 @@ position = Vector2( -285.393, -370.398 )
 
 [node name="Onion_Colletable2" parent="Collectables_Onion" instance=ExtResource( 4 )]
 position = Vector2( 389.964, -599.433 )
+
+[node name="Onion_Colletable22" parent="Collectables_Onion" instance=ExtResource( 4 )]
+position = Vector2( -24.0625, -126.679 )
+
+[node name="Onion_Colletable23" parent="Collectables_Onion" instance=ExtResource( 4 )]
+position = Vector2( -499.384, -118.887 )
+
+[node name="Onion_Colletable24" parent="Collectables_Onion" instance=ExtResource( 4 )]
+position = Vector2( 404.769, -125.737 )
+
+[node name="Onion_Colletable25" parent="Collectables_Onion" instance=ExtResource( 4 )]
+position = Vector2( 623.958, -457.945 )
+
+[node name="Onion_Colletable26" parent="Collectables_Onion" instance=ExtResource( 4 )]
+position = Vector2( 1665.1, -358.625 )
+
+[node name="Onion_Colletable27" parent="Collectables_Onion" instance=ExtResource( 4 )]
+position = Vector2( 2308.97, -745.63 )
+
+[node name="Onion_Colletable28" parent="Collectables_Onion" instance=ExtResource( 4 )]
+position = Vector2( 3264.5, -204.508 )
+
+[node name="Onion_Colletable29" parent="Collectables_Onion" instance=ExtResource( 4 )]
+position = Vector2( 3201.58, -988.159 )
 
 [node name="Onion_Colletable3" parent="Collectables_Onion" instance=ExtResource( 4 )]
 position = Vector2( 49.3491, -681.65 )

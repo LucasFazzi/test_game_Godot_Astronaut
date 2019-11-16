@@ -13,4 +13,4 @@ texture = ExtResource( 2 )
 
 [node name="Enemy_3_Collision" type="CollisionPolygon2D" parent="."]
 visible = false
-polygon = PoolVector2Array( -14.5539, 11.0198, -0.656818, -3.47416, 0.451538, -3.47416, 15.6275, 11.7018, 15.6115, 15.3239, -14.895, 15.6237 )
+polygon = PoolVector2Array( -14.5539, 11.0198, -0.555834, -3.05562, 0.555267, -2.98618, 15.2079, 11.5276, 15.1385, 15.2081, -14.895, 15.6237 )

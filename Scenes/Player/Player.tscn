@@ -1,24 +1,24 @@
 [gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Script/Player/Player.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/Player/astronaut_left-1.png.png" type="Texture" id=2]
-[ext_resource path="res://Sprites/Player/astronaut_left-2.png.png" type="Texture" id=3]
-[ext_resource path="res://Sprites/Player/astronaut_right-1.png.png" type="Texture" id=4]
-[ext_resource path="res://Sprites/Player/astronaut_right-2.png.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Player/astronaut_right-1.png.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Player/astronaut_right-2.png.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Player/astronaut_left-1.png.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Player/astronaut_left-2.png.png" type="Texture" id=5]
 [ext_resource path="res://Sprites/Player/astronaut_idle-1.png.png" type="Texture" id=6]
 [ext_resource path="res://Sprites/Player/astronaut_idle-2.png.png" type="Texture" id=7]
 [ext_resource path="res://Sprites/Player/astronaut_left_jump -1.png.png" type="Texture" id=8]
-[ext_resource path="res://Sprites/Player/astronaut_front_jump.png" type="Texture" id=9]
-[ext_resource path="res://Sprites/Player/astronaut_right_jump-1.png.png" type="Texture" id=10]
-[ext_resource path="res://Sprites/Player/astronaut_left_pushing-1.png.png" type="Texture" id=11]
-[ext_resource path="res://Sprites/Player/astronaut_left_pushing-2.png.png" type="Texture" id=12]
-[ext_resource path="res://Sprites/Player/astronaut_left_pushing_stop-1.png.png" type="Texture" id=13]
-[ext_resource path="res://Sprites/Player/astronaut_left_pushing_stop-2.png.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/Player/astronaut_right_jump-1.png.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Player/astronaut_left_pushing-1.png.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Player/astronaut_left_pushing-2.png.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Player/astronaut_left_pushing_stop-1.png.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Player/astronaut_left_pushing_stop-2.png.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/Player/astronaut_pushing_top-1.png.png" type="Texture" id=14]
 [ext_resource path="res://Sprites/Player/astronaut_right_pushing -1.png.png" type="Texture" id=15]
 [ext_resource path="res://Sprites/Player/astronaut_right_pushing -2.png.png" type="Texture" id=16]
-[ext_resource path="res://Sprites/Player/astronaut_right_pushing_stop-1.png.png" type="Texture" id=17]
-[ext_resource path="res://Sprites/Player/astronaut_right_pushing_stop-2.png.png" type="Texture" id=18]
-[ext_resource path="res://Sprites/Player/astronaut_pushing_top-1.png.png" type="Texture" id=19]
+[ext_resource path="res://Sprites/Player/astronaut_front_jump.png" type="Texture" id=17]
+[ext_resource path="res://Sprites/Player/astronaut_right_pushing_stop-1.png.png" type="Texture" id=18]
+[ext_resource path="res://Sprites/Player/astronaut_right_pushing_stop-2.png.png" type="Texture" id=19]
 [ext_resource path="res://Scenes/GUI/GUI.tscn" type="PackedScene" id=20]
 [ext_resource path="res://Script/Player/Player_Body_Area.gd" type="Script" id=21]
 
@@ -26,12 +26,12 @@
 animations = [ {
 "frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
 "loop": true,
-"name": "left",
+"name": "right",
 "speed": 3.0
 }, {
 "frames": [ ExtResource( 4 ), ExtResource( 5 ) ],
 "loop": true,
-"name": "right",
+"name": "left",
 "speed": 3.0
 }, {
 "frames": [ ExtResource( 6 ), ExtResource( 7 ) ],
@@ -46,38 +46,38 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 9 ) ],
 "loop": true,
-"name": "jump_front",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 10 ) ],
-"loop": true,
 "name": "jump_right",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 11 ), ExtResource( 12 ) ],
+"frames": [ ExtResource( 10 ), ExtResource( 11 ) ],
 "loop": true,
 "name": "left_pushing",
 "speed": 3.0
 }, {
-"frames": [ ExtResource( 13 ), ExtResource( 14 ) ],
+"frames": [ ExtResource( 12 ), ExtResource( 13 ) ],
 "loop": true,
 "name": "left_pushing_stop",
 "speed": 2.0
+}, {
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "pushing_top",
+"speed": 3.0
 }, {
 "frames": [ ExtResource( 15 ), ExtResource( 16 ) ],
 "loop": true,
 "name": "right_pushing",
 "speed": 3.0
 }, {
-"frames": [ ExtResource( 17 ), ExtResource( 18 ) ],
+"frames": [ ExtResource( 17 ) ],
+"loop": true,
+"name": "jump_front",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 18 ), ExtResource( 19 ) ],
 "loop": true,
 "name": "right_pushing_stop",
 "speed": 2.0
-}, {
-"frames": [ ExtResource( 19 ) ],
-"loop": true,
-"name": "pushing_top",
-"speed": 3.0
 } ]
 
 [node name="Player_KinematicBody" type="KinematicBody2D"]
@@ -91,7 +91,6 @@ __meta__ = {
 [node name="Player_AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 animation = "idle"
-frame = 1
 playing = true
 
 [node name="Player_Collision" type="CollisionPolygon2D" parent="."]
@@ -113,5 +112,5 @@ collision_mask = 40
 script = ExtResource( 21 )
 
 [node name="Player_Body_area_Collision" type="CollisionPolygon2D" parent="Player_Body_Area"]
-polygon = PoolVector2Array( -10.5962, -2.27767, -5.71892, -2.32354, -7.22306, -3.13829, -10.8266, -5.56444, -10.8266, -12.2907, -6.86456, -15.6538, -5.73166, -16.5413, 6.10783, -16.5413, 7.0947, -15.792, 10.6882, -12.521, 10.6882, -4.59697, 5.2488, -2.26087, 10.596, -2.18552, 10.596, 7.85777, 5.81285, 7.82943, 5.9382, 11.9658, 10.596, 11.8918, 10.5865, 16.331, -10.5118, 16.331, -10.5041, 11.7536, -5.96215, 12.0638, -5.88905, 8.04341, -10.5962, 8.04205 )
+polygon = PoolVector2Array( -10.5962, -2.27767, -5.71892, -2.32354, -7.22306, -3.13829, -10.8266, -5.56444, -10.8266, -12.2907, -6.86456, -15.6538, -5.73166, -16.5413, 6.10783, -16.5413, 7.0947, -15.792, 10.6882, -12.521, 10.6882, -4.59697, 5.2488, -2.26087, 10.596, -2.18552, 10.596, 7.85777, 5.81285, 7.82943, 5.9382, 11.9658, 10.2474, 11.9572, 10.2474, 15.8179, -10.2464, 15.8179, -10.343, 11.925, -5.96215, 12.0638, -5.88905, 8.04341, -10.5962, 8.04205 )
 [connection signal="body_entered" from="Player_Body_Area" to="Player_Body_Area" method="_on_Player_Body_Area_body_entered"]

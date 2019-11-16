@@ -16,7 +16,7 @@ animations = [ {
 radius = 16.9978
 
 [node name="Crystal_Portal_Collectable_2" type="Area2D"]
-collision_layer = 2
+collision_layer = 256
 script = ExtResource( 1 )
 
 [node name="Cyrstal_Portal_Collectable_2_AnimatedSprite" type="AnimatedSprite" parent="."]
