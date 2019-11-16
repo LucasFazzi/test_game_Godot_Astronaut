@@ -1,20 +1,33 @@
 extends Node
 
 var oxygen = 1000
-var fart = 10
+var fart = 5
 var timer_oxygen
 var portal_keys_lvl_1 = 10
-var level_check = [false,false,false,false,false,false,false,false,false,false]
-var speech_possible = [str("Ainda faltam muitos cristais..."), str("Estou vendo um futuro...")\
-, str("Estou quase indo embora..."), str("Daqui a pouco mais estarei em casa..."), str("Finalmente, já vejo o fim...")]
+var speech_possible = [str("There are so many crystals yet and I have to collect all..."), str("Some crystals already collected, I begin to see a future ...")\
+, str("Then I begin to realize that I can go home..."), str("I can already think I'm coming, the Earth is getting closer and closer.."), str("Finally i see the end of everything and i'm going away from here")]
 var speech
+var check_level = [false,false,false,false,false,false,false,false,false,false]
+
+var check_crystal_portal_lvl1 = [false,false,false,false,false,false,false,false,false,false]
+
+var collectables_oxygen_lvl_1 = [false,false,false,false,false,false,false,false,false,false,\
+false,false,false,false,false,false,false,false,false,false,\
+false,false,false,false,false,false,false,false,false,false,\
+false,false,false,false,false,false,false,false,false,false,\
+false,false,false,false,false,false,false,false]
+
+var collectables_oxygen_lvl_2 = [false,false,false,false]
+var collectables_oxygen_lvl_3 = [false,false,false]
+var collectables_oxygen_lvl_4 = [false,false,false,false,false,false,false,false,false]
+var collectables_oxygen_lvl_5 = [false,false,false,false,false,false,false,false,false,\
+false,false,false,false,false,false,false,false,false]
 
 func _ready():
 	check_oxygen()
 
 func _process(delta):
 	check_speech()
-	check_level()
 
 func check_oxygen():
 	timer_oxygen = Timer.new()
@@ -39,7 +52,3 @@ func check_speech():
 		speech = speech_possible [3]
 	if portal_keys_lvl_1 == 2 or portal_keys_lvl_1 == 1:
 		speech = speech_possible [4]
-
-func check_level():
-	if portal_keys_lvl_1 == 9:
-		level_check[0] = true

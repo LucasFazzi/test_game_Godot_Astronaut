@@ -3,17 +3,34 @@ extends KinematicBody2D
 var confirm_up = false
 var confirm_down = true
 var velocity = Vector2()
-var move_up = 35
-var move_down = -35
+var move_up = range (35,55)
+var move_down = range (-55,-35)
 
 func _ready():
+	randomic()
 	$".".add_to_group("enemies")
 
+func randomic():
+	randomize()
+	move_up.shuffle()
+	move_down.shuffle()
+	move_up = move_up[1]
+	move_down = move_down[1]
+
 func _physics_process(delta):
+	check_is_screen()
 	update_moves()
 
-func update_moves():
+func check_is_screen():
+	if $Enemy_2_Notifier.is_on_screen():
+		$Enemy_2_AnimatedSprite.play("idle")
+		pass
+	if not $Enemy_2_Notifier.is_on_screen():
+		velocity.x = 0
+		velocity.y = 0
+		$Enemy_2_AnimatedSprite.stop()
 
+func update_moves():
 	if confirm_up == true:
 		confirm_down = false 
 		velocity.y = move_up
@@ -31,6 +48,3 @@ func update_moves():
 		confirm_down = false
 		confirm_up = true
 
-func _on_Enemy_2_Area_Hit_area_entered(area):
-	if area.is_in_group("hit"):
-		$".".call_deferred("queue_free")
